@@ -7,6 +7,12 @@
 
 ## How to start
 
+### Online
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/DHTMLX/react-kanban-demo) 
+
+### On the local host 
+
 Clone the repository or download files.
 
 ```
@@ -20,8 +26,6 @@ or
 npm install
 npm run start
 ```
-
-You can also use [GitHub Codespaces](https://docs.github.com/en/codespaces/developing-in-a-codespace/creating-a-codespace-for-a-repository) to run online.
 
 ## Useful links
 
