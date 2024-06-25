@@ -21,8 +21,6 @@ export default function KanbanComponent(props) {
     return () => {
       kanban.destructor();
       toolbar.destructor();
-      kanban_container.current.innerHTML = ""; 
-      toolbar_container.current.innerHTML = "";
     };
   }, []);
 
