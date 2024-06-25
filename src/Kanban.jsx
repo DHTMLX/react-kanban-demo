@@ -12,18 +12,22 @@ export default function KanbanComponent(props) {
       cards: props.cards,
       // other configuration properties
     });
-
-    
-    new Toolbar(toolbar_container.current, {
+  
+    const toolbar = new Toolbar(toolbar_container.current, {
       api: kanban.api,
       // other configuration properties
     });
 
-    return () => (kanban_container.current.innerHTML = "", toolbar_container.current.innerHTML = "");
+    return () => {
+      kanban.destructor();
+      toolbar.destructor();
+      kanban_container.current.innerHTML = ""; 
+      toolbar_container.current.innerHTML = "";
+    };
   }, []);
 
-  return  <div className="widget_container">
+  return  <div className="component_container">
             <div ref={toolbar_container}></div>
-            <div ref={kanban_container} style={{ width: "100%", height: "100%" }}></div>
+            <div ref={kanban_container} style={{ height: "calc(100% - 56px)" }}></div>
           </div>
 }
