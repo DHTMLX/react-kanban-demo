@@ -22,7 +22,7 @@ export default function KanbanComponent(props) {
     return () => (kanban_container.current.innerHTML = "", toolbar_container.current.innerHTML = "");
   }, []);
 
-  return  <div>
+  return  <div className="widget_container">
             <div ref={toolbar_container}></div>
             <div ref={kanban_container} style={{ width: "100%", height: "100%" }}></div>
           </div>
