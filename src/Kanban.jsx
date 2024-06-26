@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { Kanban, Toolbar } from "@dhx/trial-kanban";
+import { Kanban, Toolbar, defaultEditorShape } from "@dhx/trial-kanban";
 import "@dhx/trial-kanban/dist/kanban.css";
 
 export default function KanbanComponent(props) {
@@ -10,6 +10,26 @@ export default function KanbanComponent(props) {
     const kanban = new Kanban(kanban_container.current, {
       columns: props.columns,
       cards: props.cards,
+      rows: props.rows,
+      rowKey: "type",
+      cardShape: props.cardShape,
+      editorShape: [
+        ...defaultEditorShape, // import default config for editorShape
+        {
+          type: "links",
+          key: "links",
+          label: "Links"
+        },
+        {
+          type: "comments",
+          key: "comments",
+          label: "Comments",
+          config: {
+            placement: "editor"
+          }
+        }
+      ],
+      currentUser: 1,
       // other configuration properties
     });
   
