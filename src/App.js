@@ -1,5 +1,3 @@
-import "./styles.css";
-
 import Kanban from "./Kanban";
 import { getData } from "./data";
 

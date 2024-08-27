@@ -46,6 +46,6 @@ export default function KanbanComponent(props) {
 
   return  <div className="component_container">
             <div ref={toolbar_container}></div>
-            <div ref={kanban_container} style={{ height: "calc(100% - 56px)" }}></div>
+            <div ref={kanban_container} className="widget"></div>
           </div>
 }

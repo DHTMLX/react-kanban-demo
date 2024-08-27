@@ -1,0 +1,19 @@
+/* specify styles for initial page */
+html,
+body,
+#root {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+/* specify styles for Kanban and Toolbar container*/
+.component_container {
+  height: 100%; 
+  margin: 0 auto;
+}
+
+/* specify styles for Kanban container*/
+.widget {
+    height: calc(100% - 56px);
+}
